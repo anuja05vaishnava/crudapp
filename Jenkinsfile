@@ -1,6 +1,6 @@
 node{
    stage('SCM Checkout'){
-       git credentialsId: 'github', url: 'https://github.com/anuja05vaishnava/crudapp'
+       git credentialsId: 'github', url: 'https://github.com/anuja05vaishnava/crudapp.git'
    }
   
    stage('Build Docker Image'){
