@@ -7,8 +7,10 @@ node{
      bat 'docker build -t anuja05/crud_app1:latest .'
    }
    stage('Push Docker Image'){
-    withCredentials([string(credentialsId: '', variable: 'dockerHubPwd')]) {
-     bat "docker login -u anuja05 -p 8839242932Aa@"
+    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pwd', usernameVariable: 'username')]) {
+     bat "docker login -u ${username} -p ${pwd}"
+
+    
 }
      bat 'docker push anuja05/crud_app1:latest'
    }
