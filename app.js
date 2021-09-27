@@ -6,7 +6,7 @@ const product = require('./routes/app.routes');
 const app = express();
 
 const Devdburl =
-  'mongodb+srv://aspire_training:vlZ7C48dk9Q0aPQa@cluster0.d969r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+  'mongodb+srv://aspire_training:h33TxFDAdubpbrpL@cluster0.d969r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const mongoDB = process.env.MONGODB_URI || Devdburl;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
