@@ -17,7 +17,9 @@ node{
 
 stage('Run Container on Dev Server'){
      sshagent(['aws-pwd'])  {
+        input message: 'Finished using the web site? (before)'
        bat "ssh -o StrictHostKeyChecking=no ec2-user@ec2-18-219-72-45.us-east-2.compute.amazonaws.com 'docker run -p 8080:8080 anuja05/crud_app1:latest'"
+        input message: 'Finished using the web site? (after)'
     }
    }
 
